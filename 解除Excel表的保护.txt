@@ -1,0 +1,17 @@
+1、步骤：右键【sheet1】-【查看代码】-打开代码窗口。
+2、
+Sub DeletePW()
+
+ActiveSheet.Protect DrawingObjects:=True, Contents:=True, AllowFiltering:=True
+
+ActiveSheet.Protect DrawingObjects:=False, Contents:=True, AllowFiltering:=True
+
+ActiveSheet.Protect DrawingObjects:=True, Contents:=True, AllowFiltering:=True
+
+ActiveSheet.Protect DrawingObjects:=False, Contents:=True, AllowFiltering:=True
+
+ActiveSheet.Unprotect
+
+End Sub
+运行以上代码。
+搞定！
