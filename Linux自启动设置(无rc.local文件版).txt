@@ -1,7 +1,7 @@
 eg.用于ubuntu18.04没有/etc/rc.local文件的自启动方法
 
 1.将 /lib/systemd/system/rc-local.service 链接到 /etc/systemd/system/ 目录下面来
-	ln -fs /lib/systemd/system/rc-local.service /etc/systemd/system/rc-local.service
+	sudo ln -fs /lib/systemd/system/rc-local.service /etc/systemd/system/rc-local.service
 2.修改文件内容
 	sudo vim /etc/systemd/system/rc-local.service
 3.在文件末尾增加
@@ -15,4 +15,4 @@ eg.用于ubuntu18.04没有/etc/rc.local文件的自启动方法
 6.如：把nginx设置为自启动，加入
 	/usr/local/nginx/sbin/nginx
 7.执行以下命令，时其变为可执行文件
-	chmod +x /etc/rc.local
+	sudo chmod +x /etc/rc.local
