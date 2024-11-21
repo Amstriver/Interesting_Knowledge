@@ -16,3 +16,10 @@ eg.用于ubuntu18.04没有/etc/rc.local文件的自启动方法
 	/usr/local/nginx/sbin/nginx
 7.执行以下命令，时其变为可执行文件
 	sudo chmod +x /etc/rc.local
+
+在linux中自启动文件中需要激活python环境时，在 rc.local 中直接使用 conda activate 可能会因为环境变量问题而不工作。
+可以使用：/path/to/conda/envs/rknn/bin/python /path/to/main.py
+替换 /path/to/conda 和 /path/to/main.py 为你的实际路径。
+
+在 systemd 系统中，你需要确保 rc-local.service 是启用的。可以使用以下命令来启用它：
+sudo systemctl enable rc-local.service
